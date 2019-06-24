@@ -11,7 +11,8 @@ class HomeDepotAdapter(PriceAdapter):
         return {
             '1001185011': 'Fairy Stone Vinyl Tile',
             '1001033627': 'Starry Light Vinyl Tile',
-            '1001185008': 'Plains Cottonwood Vinyl Tile'
+            '1001185008': 'Plains Cottonwood Vinyl Tile',
+            '1000689258': 'Weber Smokey Mountain 18'
         }
 
     def get_url(self, sku):
