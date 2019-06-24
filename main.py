@@ -8,10 +8,10 @@ from canadian_tire_adapter import CanadianTireAdapter
 from home_depot_adapater import HomeDepotAdapter
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--ses_user')
-parser.add_argument('--ses_pw')
-parser.add_argument('--from_email')
-parser.add_argument('--to_email')
+parser.add_argument('--ses_user', required=True)
+parser.add_argument('--ses_pw', required=True)
+parser.add_argument('--from_email', required=True)
+parser.add_argument('--to_email', required=True)
 args = parser.parse_args()
 
 results = []
