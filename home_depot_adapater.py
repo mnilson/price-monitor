@@ -12,7 +12,7 @@ class HomeDepotAdapter(PriceAdapter):
             '1001185011': 'Fairy Stone Vinyl Tile',
             '1001033627': 'Starry Light Vinyl Tile',
             '1001185008': 'Plains Cottonwood Vinyl Tile',
-            '1000689258': 'Weber Smokey Mountain 18'
+            '1000689233': 'Weber Drip Pan'
         }
 
     def get_url(self, sku):

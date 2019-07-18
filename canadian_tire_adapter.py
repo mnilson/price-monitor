@@ -13,7 +13,6 @@ class CanadianTireAdapter(PriceAdapter):
 
     def get_skus(self):
         return {
-            '3992740': 'Pit Barrel Vertical Smoker',
             '0791241': 'Orion 14-16ft boat cover'
         }
 
