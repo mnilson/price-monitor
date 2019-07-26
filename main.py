@@ -55,11 +55,13 @@ else:
 msg = f'From: {from_addr}\nTo: {to_addr}\nSubject: {subject}\n\n{content}'
 short_msg = f'From: {from_addr}\nTo: {to_short_addr}\nSubject: {subject}\n\n{subject}'
 
-s = smtplib.SMTP()
-s.connect('email-smtp.us-west-2.amazonaws.com', port=587)
-s.starttls()
-s.login(ses_user, ses_pw)
-if max_savings > 0.0:
-    s.sendmail(from_addr, to_addr, msg)
-if to_short_addr is not None:
-    s.sendmail(from_addr, to_short_addr, short_msg)
+hostname = 'email-smtp.us-west-2.amazonaws.com'
+port = 587
+with smtplib.SMTP(hostname, port=port) as s:
+    s.connect(hostname, port=port)
+    s.starttls()
+    s.login(ses_user, ses_pw)
+    if max_savings > 0.0:
+        s.sendmail(from_addr, to_addr, msg)
+    if to_short_addr is not None:
+        s.sendmail(from_addr, to_short_addr, short_msg)
